@@ -86,7 +86,6 @@ public class ModMenuManager : MonoBehaviour
 
     private float DrawGroup(float y, string title, ref bool toggle, Func<float, float> drawFunc)
     {
-        // Larger buttons for easier tapping
         if (GUI.Button(new Rect(40f, y, 460f, 55f), toggle ? ("[-] " + title) : ("[+] " + title)))
         {
             toggle = !toggle;
@@ -322,7 +321,6 @@ public class ModMenuManager : MonoBehaviour
             this.rb.useGravity = false;
             this.rb.velocity = Vector3.zero;
 
-            // Use Joystick for movement, Mobile buttons for Y axis
             float joyH = (move.joystick != null) ? move.joystick.Horizontal : 0;
             float joyV = (move.joystick != null) ? move.joystick.Vertical : 0;
             
@@ -404,19 +402,16 @@ public class ModMenuManager : MonoBehaviour
         }
 
         if (this.move) this.move.enabled = false;
-
-        // --- Mobile Mita Controls ---
+        
         float joyH = (move.joystick != null) ? move.joystick.Horizontal : 0;
         float joyV = (move.joystick != null) ? move.joystick.Vertical : 0;
-        
-        // Use Joystick to move Mita's body
+
         Vector3 mitaDir = (this.mitaManager.transform.forward * joyV + this.mitaManager.transform.right * joyH).normalized;
         this.mitaManager.transform.position += mitaDir * 4f * Time.deltaTime;
         
         if (this.mitaManager.move && this.mitaManager.move.animator) 
             this.mitaManager.move.animator.SetFloat("Speed", mitaDir.magnitude);
 
-        // Simple look rotation for mobile
         if (Input.touchCount > 0 && Input.GetTouch(0).position.x > Screen.width / 2)
         {
             Vector2 touchDelta = Input.GetTouch(0).deltaPosition;
@@ -558,4 +553,5 @@ public class ModMenuManager : MonoBehaviour
     private int _lastCheckIndex;
     private float _refreshTimer;
     public float mobileFlyY;
+
 }
