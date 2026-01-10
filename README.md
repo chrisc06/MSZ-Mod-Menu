@@ -67,7 +67,7 @@ The menu is split into feature groups (movement, visuals, spawner, Mita control,
 
 ## Platforms
 
-- **Android** (touch controls + joystick)  
+- **Android** (touch controls)  
 - **PC** (mouse + keyboard)  
 
 The UI scales automatically so it works on different screen sizes.
