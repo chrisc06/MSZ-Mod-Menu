@@ -5,6 +5,8 @@ It runs directly inside the game and gives you a bunch of tools for controlling 
 
 The whole thing runs as a persistent Unity script that hooks into the game at runtime — no access to the original source code needed.
 
+Note: This project was developed for a local single-player Unity game with explicit developer permission, for educational and tooling purposes.
+
 ---
 
 ## What it can do
