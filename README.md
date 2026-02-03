@@ -3,7 +3,7 @@
 This is a mod menu I built for the Unity-based fan game **MiSide Zero**.  
 It runs directly inside the game and gives you a bunch of tools for controlling gameplay, debugging things, and messing around with the world on both **Android and PC**.
 
-The whole thing runs as a persistent Unity script that hooks into the game at runtime — no access to the original source code needed.
+The whole thing runs as a persistent Unity script that hooks into the game at runtime, no access to the original source code needed.
 
 Note: This project was developed for a local single-player Unity game with explicit developer permission, for educational and tooling purposes.
 
